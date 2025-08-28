@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images (ex: \includegraphics[width=\linewidth]{Python Code.png}  )
+\usepackage{xcolor} % for coloring text
+\usepackage{amsmath} % for displaying text in math equations better (ex: $a < 1 \text{or} a > 2$
+\usepackage[hidelinks]{hyperref} % for using hyperlinks | 'hidelinks' removes any formatting indicating that it is a link (other than mouse hover). Without it there is an ugly blue box around the links.
+
+
+\title{ID \#0000000000 – Written Homework Week \#1}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{enumerate}
+    \item (1 point) Is ”Johann Sebastian Bach is the greatest of all the Baroque composers” a proposition? Why?
+    
+    \color{blue}
+        Answer
+    \color{black}
+    
+    \item 
+    \begin{enumerate}
+        \item (1 point) Write the negation of ”Hikaru is taller than Yutaka”. Your (verbally given) negation must not contain any words or phrases that explicitly express negation, such as ”not”, ”it is untrue that”, ”is false”, ”is incorrect”, etc.
+        
+        \color{blue}
+            Answer
+        \color{black}
+    
+        \item (1 point) Write the fully simplified negation of $3 < x \leq 4$. The variable $x$ denotes a real number.
+        
+        \color{blue}
+            Answer
+        \color{black}
+        
+        \item (1 point) Use De Morgan to give an equivalent statement of ”It’s not true that Finley is rich and famous.”
+        
+        \color{blue}
+            Answer
+        \color{black}
+    \end{enumerate}
+    
+    \item (1 point) Is the conditional statement ”If a human being has 7 heads, then they have 11 arms” true or false? Why?
+    
+    \color{blue}
+        Answer
+    \color{black}
+    
+    \item Rephrase the following statements in standard ”if.. then” form: 
+    \begin{enumerate}
+        \item (1 point) ”We are buying a new TV only if the old TV breaks down.” 
+        
+        \color{blue}
+            Answer
+        \color{black}
+    
+        \item (1 point) ”In the United States, a good credit score is necessary for obtaining a loan.”
+        
+        \color{blue}
+            Answer
+        \color{black}
+    
+        \item (1 point) “Unless you make me a better offer, I will keep my current job.”
+        
+        \color{blue}
+            Answer
+        \color{black}
+        
+        \item (1 point) “The observation of faster than light travel would be sufficient reason to question relativity theory.”
+        
+        \color{blue}
+            Answer
+        \color{black}
+    \end{enumerate}
+    
+    \item (5 points) Rephrase verbally in equivalent only if, sufficient, necessary, contrapositive and unless form: ”if we had an FTL drive, then we could visit the stars”.
+
+    \color{blue}
+    \begin{itemize}
+        \item[Only If:] Answer
+
+        \item[Sufficient:] Answer
+        
+        \item[Necessary:] Answer
+        
+        \item[Contrapositive:] Answer
+        
+        \item[Unless:] Answer
+    \end{itemize}
+    \color{black}
+    
+    \item Rephrase in contrapositive form:
+    \begin{enumerate}
+        \item  (1 point) ”If you are taller than 6 ft, then it is unpleasant for you to travel in economy class.” Your contrapositive must not contain explicit references to negation. Assume that the negation of ”unpleasant” is ”pleasant”.
+        
+        \color{blue}
+            Answer
+        \color{black}
+         
+        \item  (1 point) ”If $x \geq 0$ and $y \geq 0$ then $xy \geq 0$” where $x$, $y$ are real numbers.
+        
+        \color{blue}
+            Answer
+        \color{black}
+    \end{enumerate}
+    
+    \item (2 points) Use logical equivalences to give a logically equivalent expression to $\neg p \rightarrow q$ that does not use the conditional. Identify the logical equivalences by name. You will not receive credit for a truth table solution.
+
+    \color{blue}
+        Answer
+    \color{black}
+    
+    \item We have two mass storage devices, A and B with the same specs. Each can store N bits, but read/write operations are slow. We mitigate this problem by turning the two devices into a storage array: data is alternatingly written to A and B. The array can now store 2$N$ bits, and read and write at almost twice the speed of the individual devices, assuming that the time it takes to send data to A and B is negligible, compared to the time it takes each device to write the data.
+    
+    There is however a flaw in this plan. Since data is distributed over two devices, the total chance of failure has now doubled. The failure of just one device causes the failure of the array.
+
+    We could eliminate this problem by copying all of A’s data redundantly to an additional devices C, and all of B’s data to an additional device D. This insures against single and double drive failure, but at the cost of doubling the required amount of storage devices.
+    
+    We decide that simultaneous drive failure is sufficiently unlikely to ignore that possibility, and we will guard against data loss from single drive failure only. This requires only one extra device C, as follows: 
+    
+    We abstract each device as a list of bits, 
+    \\$A = a_1, a_2, \cdots, a_N$, $B = b_1, b_2, \cdots, b_N$, and $C = c_1, c_2, \cdots, c_N$.
+    
+    Then for each $k = 1\cdots N,\ C$ stores
+    \begin{center}
+        $c_k = a_k\ \textsc{XOR}\ b_k$. 
+    \end{center}
+    
+
+    Here, XOR is the bitwise exclusive or operation.
+
+    \begin{enumerate}
+        \item  (2 points) With this scheme, if bit k fails on device A or B (not both), it can be reconstructed from bit k on device C. Explain.
+
+        \color{blue}
+            Answer
+        \color{black}
+        
+        \item  (2 points) Would the same reconstruction property still hold if you used logical AND instead of XOR? Explain your answer.
+
+        \color{blue}
+            Answer
+        \color{black}
+        
+        \item  (2 points) Would the same reconstruction property still hold if you used logical inclusive OR instead of XOR? Explain your answer.
+
+        \color{blue}
+            Answer
+        \color{black}
+        
+    \end{enumerate}
+
+    \item (4 points extra credit) The goal of this problem is to disprove a logical equivalence programmatically. Write a Python program that prints a complete truth table for $(a \rightarrow b) \rightarrow (c \rightarrow d)$ and $(a \rightarrow (b \rightarrow c)) \rightarrow d$, and marks the rows where the two statements have different truth values. You have to build the truth table from scratch. Don’t use a build-in truth table generator. Show your program and the output
+    
+    \color{blue}
+    \begin{center}
+        Pictures
+    \end{center}
+    \color{black}
+    
+\end{enumerate}
+
+
+
+\end{document}
