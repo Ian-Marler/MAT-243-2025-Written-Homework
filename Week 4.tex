@@ -1,0 +1,63 @@
+\documentclass{article}
+%Blank formatted by Ian Marler
+\usepackage{graphicx} % Required for inserting images (ex: \includegraphics[width=\linewidth]{Python Code.png}  )
+\usepackage{xcolor} % for coloring text
+\usepackage{amsmath} % for displaying text in math equations better (ex: $a < 1 \text{or} a > 2$
+\usepackage[hidelinks]{hyperref} % for using hyperlinks | 'hidelinks' removes any formatting indicating that it is a link (other than mouse hover). Without it there is an ugly blue box around the links.
+\usepackage{enumitem}
+
+\title{ID \#0000000000 – Written Homework Week \#4}
+
+\begin{document}
+
+\newlist{numberedList}{enumerate}{10} \setlist[numberedList]{label=\arabic*.} %for making a numbered list when enumerate is unavailable 
+
+\maketitle
+
+    After you read the lecture and example pdf’s, read ”Avoiding Common Mistakes in Proof Writing” page on Canvas which describes the mistakes that many 243 students make. In your proof, you can use ”obvious facts” and simple theorems that we have proved previously in lecture.\\
+    
+    There are 8 problems in this homework set. Problem 8 is on the second page of the pdf.
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item (2 points extra credit) When the conditional statement $p \rightarrow q$ needs to be proved, state what needs to be assumed and what needs to be proved to justify the statement:
+        
+        \begin{itemize}
+            \item using direct proof,
+            \item using proof by contraposition,
+            \item using proof by contradiction.
+        \end{itemize}
+        
+        \item When a quantified statement ”$\forall x\exists yP (x, y)$ is true” has to be proved using direct proof techniques, how would you proceed? Explain.
+    \end{enumerate}
+
+
+    \item (3 points) Prove directly that the product of an even and an odd number is even.
+    \item (3 points) Prove by contraposition for arbitrary $x \neq -2$: if $x$ is irrational, then so is $\frac{x}{x+2}$.
+    \item (2 points) Disprove: If $x$ is irrational and $y$ is irrational, then $x + y$ is irrational.
+    \item Prove the following existential statements:
+    \begin{enumerate}
+        \item (2 points) There exists a real number $x$ such that $x^2 - 4x + 3 = 0$.
+        \item (2 points) There is a real number $x$ such that $(x \geq 1) \rightarrow (x^2 < 0)$
+    \end{enumerate}
+    \newpage
+    \item (4 points) Prove that for all integers $n$, there exists an even integer $k$ such that
+    \begin{center}
+       $n < k + 3 \leq n + 2$
+    \end{center}
+    .\\
+    (You can use that facts without proof that even plus even is even or/and even plus odd is odd.)
+    \item (4 points) Prove that for any positive integer $n$, there is an even positive integer $k$ so that \[\frac{1}{n + 2} \leq \frac{1}{k - 1} < \frac{1}{n}\]
+    (You can use that facts without proof that even plus even is even or/and even plus odd is odd.)
+
+    \item (4 points) Prove that there is no positive integer $n$ so that $25 < n^2 < 36$. Prove this by directly. 
+    
+    Your proof must only use integers, inequalities and elementary logic. You may use that inequalities are preserved by adding a number on both sides, or by multiplying both sides by a positive number. You cannot use the square root function. Do not write a proof by contradiction.
+    
+    \item (4 points extra credit) We have learned that $\sqrt{2}$ is not rational. However, $\sqrt{2}$  can be arbitrarily well approximated by rational numbers. The goal of this programming exercise is to find the best approximation $p/q \approx \sqrt{2}$ with $2 \leq q \leq 100,000$.
+
+    Write a Python program that iterates through all these $q$ values. For each $q$, use the reasonable constraint $1.4 < p/q < 1.5$ to come up with a small set of integer candidates p for a good approximation. Your program should output the $(p, q)$ for which $p/q$ approximates $\sqrt{2}$ best. Your program must not contain hardcoded approximations to $\sqrt{2}$, other than the numbers $1.4$ and $1.5$, or use Math.sqrt() or equivalent.
+\end{enumerate}
+
+\end{document}
